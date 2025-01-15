@@ -46,22 +46,23 @@ const Grid = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 800) {
-        setIsDraggable(false) // Disable dragging on mobile
+      if (window.innerWidth < 1024) {
+        setIsDraggable(false) // Disable dragging on mobile and tablet
       } else {
         setIsDraggable(true) // Enable dragging on desktop
       }
     }
-
+  
     // Initial check on mount
     handleResize()
-
+  
     // Add resize event listener
     window.addEventListener("resize", handleResize)
-
+  
     // Cleanup the event listener
     return () => window.removeEventListener("resize", handleResize)
   }, [])
+  
 
   return (
     <div className={styles.container}>
