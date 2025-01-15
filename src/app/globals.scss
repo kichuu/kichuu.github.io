@@ -146,79 +146,79 @@ a {
   transition: none;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 
-** {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  cursor: none !important;
-}
+// ** {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   -webkit-font-smoothing: antialiased;
+//   cursor: none !important;
+// }
 
 /* Default to light mode */
 /* Default to light mode */
 
 
 /* Dark mode variables */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --cursor-follower-bg: rgba(255, 255, 255, 0.288); /* Light background for dark mode */
-    --cursor-follower-clicking-bg: rgba(255, 255, 255, 0.2); /* Light clicking background for dark mode */
-  }
-}
-:root {
-  --cursor-follower-bg: rgba(78, 60, 60, 0.479); /* Darker background for light mode */
-  --cursor-follower-clicking-bg: rgba(0, 0, 0, 0.3); /* Darker clicking background for light mode */
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --cursor-follower-bg: rgba(255, 255, 255, 0.288); /* Light background for dark mode */
+//     --cursor-follower-clicking-bg: rgba(255, 255, 255, 0.2); /* Light clicking background for dark mode */
+//   }
+// }
+// :root {
+//   --cursor-follower-bg: rgba(78, 60, 60, 0.479); /* Darker background for light mode */
+//   --cursor-follower-clicking-bg: rgba(0, 0, 0, 0.3); /* Darker clicking background for light mode */
+// }
 
-body {
-  overflow: hidden;
-}
+// body {
+//   overflow: hidden;
+// }
 
-.cursor.cursor-clicking {
-  width: 16px;
-  height: 16px;
-  background: rgba(255, 255, 255, 0.9);
-  animation: cursorClickEffect 0.2s ease;
-}
+// .cursor.cursor-clicking {
+//   width: 16px;
+//   height: 16px;
+//   background: rgba(255, 255, 255, 0.9);
+//   animation: cursorClickEffect 0.2s ease;
+// }
 
-.cursor-follower {
-  width: 32px;
-  height: 32px;
-  background: var(--cursor-follower-bg);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 998;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease-out;
-  backdrop-filter: blur(4px);
-}
+// .cursor-follower {
+//   width: 32px;
+//   height: 32px;
+//   background: var(--cursor-follower-bg);
+//   border-radius: 50%;
+//   position: fixed;
+//   pointer-events: none;
+//   z-index: 998;
+//   transform: translate(-50%, -50%);
+//   transition: all 0.3s ease-out;
+//   backdrop-filter: blur(4px);
+// }
 
-.cursor-follower.cursor-follower-clicking {
-  width: 40px;
-  height: 40px;
-  background: var(--cursor-follower-clicking-bg);
-  transition: all 0.2s ease-out;
-}
+// .cursor-follower.cursor-follower-clicking {
+//   width: 40px;
+//   height: 40px;
+//   background: var(--cursor-follower-clicking-bg);
+//   transition: all 0.2s ease-out;
+// }
 
-@keyframes cursorClickEffect {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.5);
-  }
-}
+// @keyframes cursorClickEffect {
+//   0% {
+//     transform: translate(-50%, -50%) scale(1);
+//   }
+//   100% {
+//     transform: translate(-50%, -50%) scale(1.5);
+//   }
+// }
 
-@keyframes cursorFollowEffect {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.1);
-  }
-}
+// @keyframes cursorFollowEffect {
+//   0% {
+//     transform: translate(-50%, -50%) scale(1);
+//   }
+//   100% {
+//     transform: translate(-50%, -50%) scale(1.1);
+//   }
+// }
