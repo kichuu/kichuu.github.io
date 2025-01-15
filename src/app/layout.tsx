@@ -8,13 +8,13 @@ import { Cursor } from "@/components/cursor";
 
 export const metadata: Metadata = {
   title: "Krishnadev R - Portfolio",
-  description: "A portfolio of Krishnadev R, a Front-end Software Engineer based in Austin, Texas.",
+  description: "A portfolio of Krishnadev R, a Software Engineer based in Kochi, Kerala.",
   authors: [
     { name: "Krishnadev R", url: "www..com" },
   ],
   openGraph: {
     title: "Krishnadev R - Portfolio",
-    description: "A portfolio of Krishnadev R, a Front-end Software Engineer based in Austin, Texas.",
+    description: "A portfolio of Krishnadev R, a Software Engineer based in Kochi, Kerala.",
     url: "https://www.kichuu.github.io",
     siteName: "Krishnadev R - Portfolio",
     type: "website",
@@ -27,7 +27,11 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    icon: "/favicon.ico", // Assuming the favicon is located in the public folder
+  },
 };
+
 
 export default function RootLayout({
   children,
