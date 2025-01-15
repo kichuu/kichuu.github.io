@@ -69,7 +69,7 @@ const Grid = () => {
       <ResponsiveGridLayout
         useCSSTransforms
         className={styles.layout}
-        layouts={layouts.all}
+        layouts={layouts.about}
         breakpoints={{
           lg: 1199,
           md: 799,

@@ -150,170 +150,75 @@ a {
 @tailwind components;
 @tailwind utilities;
 
-* {
+** {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   cursor: none !important;
-
-  &::before,
-  &::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 }
 
-.cursor {
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 255, 255, 1);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 999;
-  transform: translate(-50%, -50%);
-  transition: all 0.15s ease;
-  mix-blend-mode: difference;
-  animation: cursorRainbow 6s linear infinite;
-  backdrop-filter: blur(4px);
+/* Default to light mode */
+/* Default to light mode */
+
+
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cursor-follower-bg: rgba(255, 255, 255, 0.288); /* Light background for dark mode */
+    --cursor-follower-clicking-bg: rgba(255, 255, 255, 0.2); /* Light clicking background for dark mode */
+  }
+}
+:root {
+  --cursor-follower-bg: rgba(78, 60, 60, 0.479); /* Darker background for light mode */
+  --cursor-follower-clicking-bg: rgba(0, 0, 0, 0.3); /* Darker clicking background for light mode */
+}
+
+body {
+  overflow: hidden;
 }
 
 .cursor.cursor-clicking {
-  width: 12px;
-  height: 12px;
-  background: rgba(255, 255, 255, 1);
-  transition: all 0.1s ease;
-  animation: cursorPulse 0.5s ease infinite alternate;
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  animation: cursorClickEffect 0.2s ease;
 }
 
 .cursor-follower {
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.15);
+  width: 32px;
+  height: 32px;
+  background: var(--cursor-follower-bg);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 998;
   transform: translate(-50%, -50%);
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  animation: followerRainbow 6s linear infinite;
-  backdrop-filter: blur(2px);
+  transition: all 0.3s ease-out;
+  backdrop-filter: blur(4px);
 }
 
 .cursor-follower.cursor-follower-clicking {
-  width: 36px;
-  height: 36px;
-  border-width: 3px;
-  background: rgba(0, 0, 0, 0.2);
-  transition: all 0.1s cubic-bezier(0.23, 1, 0.32, 1);
-  animation: followerPulse 0.5s ease infinite alternate;
+  width: 40px;
+  height: 40px;
+  background: var(--cursor-follower-clicking-bg);
+  transition: all 0.2s ease-out;
 }
 
-@keyframes cursorRainbow {
+@keyframes cursorClickEffect {
   0% {
-    box-shadow: 
-      0 0 10px rgba(255, 0, 89, 0.8),
-      0 0 20px rgba(255, 0, 89, 0.4),
-      0 0 30px rgba(255, 0, 89, 0.2),
-      0 0 40px rgba(255, 0, 89, 0.1);
-  }
-  20% {
-    box-shadow: 
-      0 0 10px rgba(255, 0, 255, 0.8),
-      0 0 20px rgba(255, 0, 255, 0.4),
-      0 0 30px rgba(255, 0, 255, 0.2),
-      0 0 40px rgba(255, 0, 255, 0.1);
-  }
-  40% {
-    box-shadow: 
-      0 0 10px rgba(111, 0, 255, 0.8),
-      0 0 20px rgba(111, 0, 255, 0.4),
-      0 0 30px rgba(111, 0, 255, 0.2),
-      0 0 40px rgba(111, 0, 255, 0.1);
-  }
-  60% {
-    box-shadow: 
-      0 0 10px rgba(0, 200, 255, 0.8),
-      0 0 20px rgba(0, 200, 255, 0.4),
-      0 0 30px rgba(0, 200, 255, 0.2),
-      0 0 40px rgba(0, 200, 255, 0.1);
-  }
-  80% {
-    box-shadow: 
-      0 0 10px rgba(0, 255, 200, 0.8),
-      0 0 20px rgba(0, 255, 200, 0.4),
-      0 0 30px rgba(0, 255, 200, 0.2),
-      0 0 40px rgba(0, 255, 200, 0.1);
+    transform: translate(-50%, -50%) scale(1);
   }
   100% {
-    box-shadow: 
-      0 0 10px rgba(255, 0, 89, 0.8),
-      0 0 20px rgba(255, 0, 89, 0.4),
-      0 0 30px rgba(255, 0, 89, 0.2),
-      0 0 40px rgba(255, 0, 89, 0.1);
+    transform: translate(-50%, -50%) scale(1.5);
   }
 }
 
-@keyframes followerRainbow {
+@keyframes cursorFollowEffect {
   0% {
-    border-color: rgba(255, 0, 89, 0.3);
-    box-shadow: 
-      0 0 30px rgba(255, 0, 89, 0.1),
-      inset 0 0 20px rgba(255, 0, 89, 0.1);
-  }
-  20% {
-    border-color: rgba(255, 0, 255, 0.3);
-    box-shadow: 
-      0 0 30px rgba(255, 0, 255, 0.1),
-      inset 0 0 20px rgba(255, 0, 255, 0.1);
-  }
-  40% {
-    border-color: rgba(111, 0, 255, 0.3);
-    box-shadow: 
-      0 0 30px rgba(111, 0, 255, 0.1),
-      inset 0 0 20px rgba(111, 0, 255, 0.1);
-  }
-  60% {
-    border-color: rgba(0, 200, 255, 0.3);
-    box-shadow: 
-      0 0 30px rgba(0, 200, 255, 0.1),
-      inset 0 0 20px rgba(0, 200, 255, 0.1);
-  }
-  80% {
-    border-color: rgba(0, 255, 200, 0.3);
-    box-shadow: 
-      0 0 30px rgba(0, 255, 200, 0.1),
-      inset 0 0 20px rgba(0, 255, 200, 0.1);
+    transform: translate(-50%, -50%) scale(1);
   }
   100% {
-    border-color: rgba(255, 0, 89, 0.3);
-    box-shadow: 
-      0 0 30px rgba(255, 0, 89, 0.1),
-      inset 0 0 20px rgba(255, 0, 89, 0.1);
-  }
-}
-
-@keyframes cursorPulse {
-  from {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0.8;
-  }
-}
-
-@keyframes followerPulse {
-  from {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.8;
-  }
-  to {
     transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.6;
   }
 }
