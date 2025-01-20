@@ -69,7 +69,7 @@ const Grid = () => {
       <ResponsiveGridLayout
         useCSSTransforms
         className={styles.layout}
-        layouts={layouts.about}
+        layouts={layouts.all}
         breakpoints={{
           lg: 1199,
           md: 799,
@@ -198,7 +198,7 @@ const Grid = () => {
             <MyTechCard />
           </BlurFade>
         </div>
-        {/* <div
+        <div
           key="jobs"
           className={cn(styles.itemGrab, styles.item)}
           style={{
@@ -208,7 +208,7 @@ const Grid = () => {
           <BlurFade delay={0.4}>
             <JobsCard />
           </BlurFade>
-        </div> */}
+        </div>
         <div
           key="game-tech"
           className={cn(styles.itemGrab, styles.item)}
@@ -242,8 +242,8 @@ const Grid = () => {
 						<StationSetupCard />
 					</BlurFade>
 				</div> */}
-        {/* <div
-					key="alliance-dao"
+        <div
+					key="dropify"
 					className={cn(styles.itemGrab, styles.item)}
 					style={{
 						transitionDuration: isMounted ? "700ms" : "0ms"
@@ -252,7 +252,7 @@ const Grid = () => {
 					<BlurFade delay={0.65}>
 						<AllianceDaoCard />
 					</BlurFade>
-				</div> */}
+				</div>
         {/* <div
 					key="alliance-landing"
 					className={cn(styles.itemGrab, styles.item)}
