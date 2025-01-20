@@ -4,7 +4,7 @@ import SendmessageIcon from "../../lottie-ui/send-message";
 import CardWrapper from "../card-wrapper";
 import GitHubIcon from "@/components/lottie-ui/github-icon";
 
-const AllianceDao = () => {
+const Dropify = () => {
   return (
     <CardWrapper>
     <div className="relative h-full flex flex-col justify-center gap-6 py-4 sm:py-6 px-4 sm:px-8 overflow-hidden">
@@ -63,4 +63,4 @@ const AllianceDao = () => {
   )
 }
 
-export default AllianceDao
+export default Dropify
