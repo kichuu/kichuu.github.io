@@ -1,19 +1,19 @@
-import { ReactNode } from "react"
-import { useTheme } from "next-themes"
+import { ReactNode } from "react";
+import { useTheme } from "next-themes";
 
 const shineMaskImage = `
   radial-gradient(
     circle at 50% 150%,
     white,
     transparent
-  )`
+  )`;
 
 interface CardWrapperProps {
   children: ReactNode;
 }
 
 export default function CardWrapper({ children }: CardWrapperProps) {
-  const { resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme();
 
   return (
     <div className="group w-full h-full relative overflow-hidden rounded-3xl p-px dark:bg-white/10 bg-white/60">
@@ -71,9 +71,8 @@ export default function CardWrapper({ children }: CardWrapperProps) {
         </>
       )}
 
-      <div className="relative h-full">
-        {children}
-      </div>
+      {/* Ensure child content is always on top */}
+      <div className="relative z-10 h-full">{children}</div>
     </div>
-  )
+  );
 }

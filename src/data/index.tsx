@@ -64,7 +64,7 @@ export const layouts = {
         isResizable: false,
       },
       {
-        i: "alliance-dao",
+        i: "dropify",
         x: 0, y: 16, w: 6, h: 7,
         isResizable: false,
       },
@@ -146,7 +146,7 @@ export const layouts = {
         isResizable: false,
       },
       {
-        i: "alliance-dao",
+        i: "dropify",
         x: 0, y: 30, w: 5, h: 8,
         isResizable: false,
       },
@@ -233,7 +233,7 @@ export const layouts = {
         isResizable: false,
       },
       {
-        i: "alliance-dao",
+        i: "dropify",
         x: 0, y: 74, w: 6, h: 10,
         isResizable: false,
       },
@@ -317,7 +317,7 @@ export const layouts = {
         isResizable: false,
       },
       {
-        i: "alliance-dao",
+        i: "dropify",
         x: 0, y: 20, w: 6, h: 6,
         isResizable: false,
       },
@@ -399,7 +399,7 @@ export const layouts = {
         isResizable: false,
       },
       {
-        i: "alliance-dao",
+        i: "dropify",
         x: 5, y: 30, w: 5, h: 8,
         isResizable: false,
       },
@@ -481,7 +481,7 @@ export const layouts = {
         isResizable: false,
       },
       {
-        i: "alliance-dao",
+        i: "dropify",
         x: 0, y: 74, w: 6, h: 10,
         isResizable: false,
       },
@@ -560,7 +560,7 @@ export const layouts = {
         isResizable: false,
       },
       {
-        i: "alliance-dao",
+        i: "dropify",
         x: 6, y: 9, w: 6, h: 6,
         isResizable: false,
       },
@@ -642,7 +642,7 @@ export const layouts = {
         isResizable: false,
       },
       {
-        i: "alliance-dao",
+        i: "dropify",
         x: 5, y: 13, w: 5, h: 8,
         isResizable: false,
       },
@@ -724,7 +724,7 @@ export const layouts = {
         isResizable: false,
       },
       {
-        i: "alliance-dao",
+        i: "dropify",
         x: 0, y: 41, w: 4, h: 10,
         isResizable: false,
       },
