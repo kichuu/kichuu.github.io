@@ -47,7 +47,7 @@ const MyTechCard = () => {
             Currently Using
           </h4>
           <h1 className="text-2xl font-medium dark:text-white text-black uppercase opacity-90 text-center">
-            NOTHING <span className="text-xl"></span>
+            STACK <span className="text-xl"></span>
           </h1>
         </div>
       </div>
