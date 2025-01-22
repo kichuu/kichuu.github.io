@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { useTheme } from "next-themes";
+import clsx from "clsx";
 
 const shineMaskImage = `
   radial-gradient(
@@ -10,13 +11,20 @@ const shineMaskImage = `
 
 interface CardWrapperProps {
   children: ReactNode;
+  className?: string;
 }
 
-export default function CardWrapper({ children }: CardWrapperProps) {
+export default function CardWrapper({ children, className }: CardWrapperProps) {
   const { resolvedTheme } = useTheme();
 
   return (
-    <div className="group w-full h-full relative overflow-hidden rounded-3xl p-px dark:bg-white/10 bg-white/60">
+    <div
+      className={clsx(
+        "group w-full h-full relative overflow-hidden rounded-3xl p-px",
+        resolvedTheme === "dark" ? "dark:bg-white/10" : "bg-white/60",
+        className
+      )}
+    >
       {resolvedTheme === "dark" && (
         <>
           <div
