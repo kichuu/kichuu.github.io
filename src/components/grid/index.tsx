@@ -1113,7 +1113,7 @@ const Grid = () => {
                 ? "dark:gray-900 text-grey-600"
                   : "bg-gray-200 dark:bg-zinc-800 dark:text-white text-gray-900"
               }`}
-              onClick={() => setActiveLayout("skills")}
+              onClick={() => setActiveLayout("about")}
             >
               About
             </button>
