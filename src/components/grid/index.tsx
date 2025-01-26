@@ -23,252 +23,793 @@ import {
   FixYourAc,
   CardWrapper,
 } from "@/components/cards"
+import { Button } from "../ui/button"
 
 export const layout = {
   all: {
-    lg: [ // > 1216px
+    lg: [
+      // > 1216px
       {
         i: "bio",
-        x: 0, y: 0, w: 5, h: 4,
+        x: 0,
+        y: 0,
+        w: 5,
+        h: 4,
         isResizable: false,
       },
       {
         i: "theme-toggle",
-        x: 9, y: 1, w: 4, h: 3,
+        x: 9,
+        y: 1,
+        w: 4,
+        h: 3,
         isResizable: false,
       },
       {
         i: "map",
-        x: 5, y: 1, w: 3, h: 3,
+        x: 5,
+        y: 1,
+        w: 3,
+        h: 3,
         isResizable: false,
       },
       {
         i: "text-marquee",
-        x: 5, y: 0, w: 7, h: 1,
+        x: 5,
+        y: 0,
+        w: 7,
+        h: 1,
         isResizable: false,
       },
       {
         i: "linkedin",
-        x: 0, y: 4, w: 2, h: 2,
+        x: 0,
+        y: 4,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "github",
-        x: 0, y: 6, w: 2, h: 2,
+        x: 0,
+        y: 6,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "codepen",
-        x: 0, y: 8, w: 2, h: 2,
+        x: 0,
+        y: 8,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "email",
-        x: 2, y: 8, w: 4, h: 2,
+        x: 2,
+        y: 8,
+        w: 4,
+        h: 2,
         isResizable: false,
       },
       {
         i: "my-stack",
-        x: 2, y: 4, w: 4, h: 4,
+        x: 2,
+        y: 4,
+        w: 4,
+        h: 4,
         isResizable: false,
       },
       {
         i: "jobs",
-        x: 6, y: 4, w: 6, h: 7,
+        x: 6,
+        y: 4,
+        w: 6,
+        h: 7,
         isResizable: false,
       },
       {
         i: "game-tech",
-        x: 0, y: 10, w: 6, h: 6,
+        x: 0,
+        y: 10,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "fix-your-ac",
-        x: 6, y: 11, w: 6, h: 7,
+        x: 6,
+        y: 11,
+        w: 6,
+        h: 7,
         isResizable: false,
       },
       {
         i: "dropify",
-        x: 0, y: 16, w: 6, h: 7,
+        x: 0,
+        y: 16,
+        w: 6,
+        h: 7,
         isResizable: false,
       },
       {
         i: "station-setup",
-        x: 6, y: 18, w: 6, h: 7,
+        x: 6,
+        y: 18,
+        w: 6,
+        h: 7,
         isResizable: false,
       },
       {
         i: "alliance-landing",
-        x: 0, y: 23, w: 6, h: 7,
+        x: 0,
+        y: 23,
+        w: 6,
+        h: 7,
         isResizable: false,
       },
       {
         i: "developer-landing",
-        x: 6, y: 25, w: 6, h: 7,
+        x: 6,
+        y: 25,
+        w: 6,
+        h: 7,
         isResizable: false,
       },
     ],
-    md: [ // 814px - 1215px
+    md: [
+      // 814px - 1215px
       {
         i: "bio",
-        x: 0, y: 0, w: 5, h: 6,
+        x: 0,
+        y: 0,
+        w: 5,
+        h: 6,
         isResizable: false,
       },
       {
         i: "theme-toggle",
-        x: 7, y: 1, w: 5, h: 5,
+        x: 7,
+        y: 1,
+        w: 5,
+        h: 5,
         isResizable: false,
       },
       {
         i: "map",
-        x: 8, y: 6, w: 2, h: 6,
+        x: 8,
+        y: 6,
+        w: 2,
+        h: 6,
         isResizable: false,
       },
       {
         i: "text-marquee",
-        x: 5, y: 0, w: 5, h: 1,
+        x: 5,
+        y: 0,
+        w: 5,
+        h: 1,
         isResizable: false,
       },
       {
         i: "linkedin",
-        x: 4, y: 6, w: 2, h: 3,
+        x: 4,
+        y: 6,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "github",
-        x: 6, y: 6, w: 2, h: 3,
+        x: 6,
+        y: 6,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "codepen",
-        x: 4, y: 8, w: 2, h: 3,
+        x: 4,
+        y: 8,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "email",
-        x: 6, y: 8, w: 2, h: 3,
+        x: 6,
+        y: 8,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "my-stack",
-        x: 0, y: 6, w: 4, h: 6,
+        x: 0,
+        y: 6,
+        w: 4,
+        h: 6,
         isResizable: false,
       },
       {
         i: "jobs",
-        x: 1, y: 12, w: 8, h: 10,
+        x: 1,
+        y: 12,
+        w: 8,
+        h: 10,
         isResizable: false,
       },
       {
         i: "game-tech",
-        x: 0, y: 22, w: 5, h: 8,
+        x: 0,
+        y: 22,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "fix-your-ac",
-        x: 6, y: 22, w: 5, h: 8,
+        x: 6,
+        y: 22,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "dropify",
-        x: 0, y: 30, w: 5, h: 8,
+        x: 0,
+        y: 30,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "station-setup",
-        x: 5, y: 30, w: 5, h: 8,
+        x: 5,
+        y: 30,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "alliance-landing",
-        x: 0, y: 38, w: 5, h: 8,
+        x: 0,
+        y: 38,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "developer-landing",
-        x: 5, y: 38, w: 5, h: 8,
+        x: 5,
+        y: 38,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
     ],
-    sm: [ // 0px - 813px
+    sm: [
+      // 0px - 813px
       {
         i: "bio",
-        x: 0, y: 1, w: 4, h: 6,
+        x: 0,
+        y: 1,
+        w: 4,
+        h: 6,
         isResizable: false,
       },
       {
         i: "theme-toggle",
-        x: 0, y: 7, w: 4, h: 5,
+        x: 0,
+        y: 7,
+        w: 4,
+        h: 5,
         isResizable: false,
       },
       {
         i: "map",
-        x: 0, y: 12, w: 4, h: 4,
+        x: 0,
+        y: 12,
+        w: 4,
+        h: 4,
         isResizable: false,
       },
       {
         i: "text-marquee",
-        x: 0, y: 0, w: 4, h: 1,
+        x: 0,
+        y: 0,
+        w: 4,
+        h: 1,
         isResizable: false,
       },
       {
         i: "linkedin",
-        x: 0, y: 16, w: 2, h: 3,
+        x: 0,
+        y: 16,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "github",
-        x: 2, y: 16, w: 2, h: 3,
+        x: 2,
+        y: 16,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "codepen",
-        x: 0, y: 19, w: 2, h: 3,
+        x: 0,
+        y: 19,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "email",
-        x: 2, y: 19, w: 2, h: 3,
+        x: 2,
+        y: 19,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "my-stack",
-        x: 0, y: 22, w: 4, h: 6,
+        x: 0,
+        y: 22,
+        w: 4,
+        h: 6,
         isResizable: false,
       },
       {
         i: "jobs",
-        x: 0, y: 28, w: 4, h: 16,
+        x: 0,
+        y: 28,
+        w: 4,
+        h: 16,
         isResizable: false,
       },
       {
         i: "game-tech",
-        x: 0, y: 44, w: 6, h: 10,
+        x: 0,
+        y: 44,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "fix-your-ac",
-        x: 0, y: 54, w: 6, h: 10,
+        x: 0,
+        y: 54,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "station-setup",
-        x: 0, y: 64, w: 6, h: 10,
+        x: 0,
+        y: 64,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "dropify",
-        x: 0, y: 74, w: 6, h: 10,
+        x: 0,
+        y: 74,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "alliance-landing",
-        x: 0, y: 84, w: 6, h: 10,
+        x: 0,
+        y: 84,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "developer-landing",
-        x: 0, y: 94, w: 6, h: 10,
+        x: 0,
+        y: 94,
+        w: 6,
+        h: 10,
+        isResizable: false,
+      },
+    ],
+  },
+
+  work: {
+    lg: [
+      {
+        i: "bio",
+        x: 6,
+        y: 21,
+        w: 6,
+        h: 4,
+        isResizable: false,
+      },
+      {
+        i: "theme-toggle",
+        x: 8,
+        y: 0,
+        w: 6,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "map",
+        x: 9,
+        y: 25,
+        w: 3,
+        h: 4,
+        isResizable: false,
+      },
+      {
+        i: "text-marquee",
+        x: 0,
+        y: 29,
+        w: 12,
+        h: 1,
+        isResizable: false,
+      },
+      {
+        i: "linkedin",
+        x: 0,
+        y: 25,
+        w: 2,
+        h: 2,
+        isResizable: false,
+      },
+      {
+        i: "github",
+        x: 2,
+        y: 25,
+        w: 2,
+        h: 2,
+        isResizable: false,
+      },
+      {
+        i: "codepen",
+        x: 0,
+        y: 27,
+        w: 2,
+        h: 2,
+        isResizable: false,
+      },
+      {
+        i: "email",
+        x: 2,
+        y: 25,
+        w: 2,
+        h: 2,
+        isResizable: false,
+      },
+      {
+        i: "my-stack",
+        x: 4,
+        y: 25,
+        w: 5,
+        h: 4,
+        isResizable: false,
+      },
+      {
+        i: "jobs",
+        x: 0,
+        y: 0,
+        w: 6,
+        h: 7,
+        isResizable: false,
+      },
+      {
+        i: "game-tech",
+        x: 6,
+        y: 3,
+        w: 6,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "fix-your-ac",
+        x: 0,
+        y: 7,
+        w: 6,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "dropify",
+        x: 6,
+        y: 9,
+        w: 6,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "station-setup",
+        x: 0,
+        y: 13,
+        w: 6,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "alliance-landing",
+        x: 6,
+        y: 15,
+        w: 6,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "developer-landing",
+        x: 0,
+        y: 19,
+        w: 6,
+        h: 6,
+        isResizable: false,
+      },
+    ],
+    md: [
+      {
+        i: "bio",
+        x: 5,
+        y: 29,
+        w: 5,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "theme-toggle",
+        x: 5,
+        y: 0,
+        w: 5,
+        h: 5,
+        isResizable: false,
+      },
+      {
+        i: "map",
+        x: 8,
+        y: 36,
+        w: 2,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "text-marquee",
+        x: 5,
+        y: 35,
+        w: 5,
+        h: 1,
+        isResizable: false,
+      },
+      {
+        i: "linkedin",
+        x: 0,
+        y: 36,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "github",
+        x: 2,
+        y: 36,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "codepen",
+        x: 0,
+        y: 39,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "email",
+        x: 2,
+        y: 39,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "my-stack",
+        x: 4,
+        y: 36,
+        w: 4,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "jobs",
+        x: 0,
+        y: 0,
+        w: 5,
+        h: 12,
+        isResizable: false,
+      },
+      {
+        i: "game-tech",
+        x: 0,
+        y: 12,
+        w: 5,
+        h: 8,
+        isResizable: false,
+      },
+      {
+        i: "fix-your-ac",
+        x: 5,
+        y: 5,
+        w: 5,
+        h: 8,
+        isResizable: false,
+      },
+      {
+        i: "dropify",
+        x: 5,
+        y: 13,
+        w: 5,
+        h: 8,
+        isResizable: false,
+      },
+      {
+        i: "station-setup",
+        x: 0,
+        y: 20,
+        w: 5,
+        h: 8,
+        isResizable: false,
+      },
+      {
+        i: "alliance-landing",
+        x: 5,
+        y: 21,
+        w: 5,
+        h: 8,
+        isResizable: false,
+      },
+      {
+        i: "developer-landing",
+        x: 0,
+        y: 28,
+        w: 5,
+        h: 8,
+        isResizable: false,
+      },
+    ],
+    sm: [
+      {
+        i: "bio",
+        x: 0,
+        y: 82,
+        w: 4,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "theme-toggle",
+        x: 0,
+        y: 0,
+        w: 4,
+        h: 5,
+        isResizable: false,
+      },
+      {
+        i: "map",
+        x: 0,
+        y: 100,
+        w: 4,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "text-marquee",
+        x: 0,
+        y: 81,
+        w: 4,
+        h: 1,
+        isResizable: false,
+      },
+      {
+        i: "linkedin",
+        x: 0,
+        y: 94,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "github",
+        x: 2,
+        y: 94,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "codepen",
+        x: 0,
+        y: 97,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "email",
+        x: 2,
+        y: 97,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "my-stack",
+        x: 0,
+        y: 88,
+        w: 4,
+        h: 6,
+        isResizable: false,
+      },
+      {
+        i: "jobs",
+        x: 0,
+        y: 5,
+        w: 4,
+        h: 16,
+        isResizable: false,
+      },
+      {
+        i: "game-tech",
+        x: 0,
+        y: 21,
+        w: 4,
+        h: 10,
+        isResizable: false,
+      },
+      {
+        i: "fix-your-ac",
+        x: 0,
+        y: 31,
+        w: 4,
+        h: 10,
+        isResizable: false,
+      },
+      {
+        i: "dropify",
+        x: 0,
+        y: 41,
+        w: 4,
+        h: 10,
+        isResizable: false,
+      },
+      {
+        i: "station-setup",
+        x: 0,
+        y: 51,
+        w: 4,
+        h: 10,
+        isResizable: false,
+      },
+      {
+        i: "alliance-landing",
+        x: 5,
+        y: 61,
+        w: 4,
+        h: 10,
+        isResizable: false,
+      },
+      {
+        i: "developer-landing",
+        x: 0,
+        y: 71,
+        w: 4,
+        h: 10,
         isResizable: false,
       },
     ],
@@ -277,499 +818,838 @@ export const layout = {
     lg: [
       {
         i: "bio",
-        x: 0, y: 0, w: 5, h: 4,
+        x: 0,
+        y: 0,
+        w: 5,
+        h: 4,
         isResizable: false,
       },
       {
         i: "theme-toggle",
-        x: 7, y: 5, w: 5, h: 3,
+        x: 7,
+        y: 5,
+        w: 5,
+        h: 3,
         isResizable: false,
       },
       {
         i: "map",
-        x: 9, y: 0, w: 3, h: 4,
+        x: 9,
+        y: 0,
+        w: 3,
+        h: 4,
         isResizable: false,
       },
       {
         i: "text-marquee",
-        x: 7, y: 4, w: 5, h: 1,
+        x: 7,
+        y: 4,
+        w: 5,
+        h: 1,
         isResizable: false,
       },
       {
         i: "linkedin",
-        x: 5, y: 0, w: 2, h: 2,
+        x: 5,
+        y: 0,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "github",
-        x: 7, y: 0, w: 2, h: 2,
+        x: 7,
+        y: 0,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "codepen",
-        x: 5, y: 2, w: 2, h: 2,
+        x: 5,
+        y: 2,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "email",
-        x: 7, y: 2, w: 2, h: 2,
+        x: 7,
+        y: 2,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "my-stack",
-        x: 0, y: 4, w: 7, h: 4,
+        x: 0,
+        y: 4,
+        w: 7,
+        h: 4,
         isResizable: false,
       },
       {
         i: "jobs",
-        x: 6, y: 8, w: 6, h: 7,
+        x: 6,
+        y: 8,
+        w: 6,
+        h: 7,
         isResizable: false,
       },
       {
         i: "game-tech",
-        x: 0, y: 8, w: 6, h: 6,
+        x: 0,
+        y: 8,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "fix-your-ac",
-        x: 0, y: 14, w: 6, h: 6,
+        x: 0,
+        y: 14,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "station-setup",
-        x: 6, y: 15, w: 6, h: 6,
+        x: 6,
+        y: 15,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "dropify",
-        x: 0, y: 20, w: 6, h: 6,
+        x: 0,
+        y: 20,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "alliance-landing",
-        x: 6, y: 21, w: 6, h: 6,
+        x: 6,
+        y: 21,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "developer-landing",
-        x: 0, y: 26, w: 6, h: 6,
+        x: 0,
+        y: 26,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
     ],
     md: [
       {
         i: "bio",
-        x: 0, y: 0, w: 5, h: 6,
+        x: 0,
+        y: 0,
+        w: 5,
+        h: 6,
         isResizable: false,
       },
       {
         i: "theme-toggle",
-        x: 6, y: 6, w: 4, h: 5,
+        x: 6,
+        y: 6,
+        w: 4,
+        h: 5,
         isResizable: false,
       },
       {
         i: "map",
-        x: 9, y: 0, w: 3, h: 4,
+        x: 9,
+        y: 0,
+        w: 3,
+        h: 4,
         isResizable: false,
       },
       {
         i: "text-marquee",
-        x: 6, y: 11, w: 4, h: 1,
+        x: 6,
+        y: 11,
+        w: 4,
+        h: 1,
         isResizable: false,
       },
       {
         i: "linkedin",
-        x: 5, y: 0, w: 2, h: 2,
+        x: 5,
+        y: 0,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "github",
-        x: 5, y: 2, w: 2, h: 2,
+        x: 5,
+        y: 2,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "codepen",
-        x: 5, y: 4, w: 2, h: 2,
+        x: 5,
+        y: 4,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "email",
-        x: 7, y: 0, w: 3, h: 2,
+        x: 7,
+        y: 0,
+        w: 3,
+        h: 2,
         isResizable: false,
       },
       {
         i: "my-stack",
-        x: 0, y: 6, w: 6, h: 6,
+        x: 0,
+        y: 6,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "jobs",
-        x: 1, y: 12, w: 8, h: 10,
+        x: 1,
+        y: 12,
+        w: 8,
+        h: 10,
         isResizable: false,
       },
       {
         i: "game-tech",
-        x: 0, y: 22, w: 5, h: 8,
+        x: 0,
+        y: 22,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "fix-your-ac",
-        x: 5, y: 22, w: 5, h: 8,
+        x: 5,
+        y: 22,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "station-setup",
-        x: 0, y: 30, w: 5, h: 8,
+        x: 0,
+        y: 30,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "dropify",
-        x: 5, y: 30, w: 5, h: 8,
+        x: 5,
+        y: 30,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "alliance-landing",
-        x: 0, y: 38, w: 5, h: 8,
+        x: 0,
+        y: 38,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "developer-landing",
-        x: 5, y: 38, w: 5, h: 8,
+        x: 5,
+        y: 38,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
     ],
     sm: [
       {
         i: "bio",
-        x: 0, y: 0, w: 4, h: 6,
+        x: 0,
+        y: 0,
+        w: 4,
+        h: 6,
         isResizable: false,
       },
       {
         i: "theme-toggle",
-        x: 0, y: 23, w: 4, h: 5,
+        x: 0,
+        y: 23,
+        w: 4,
+        h: 5,
         isResizable: false,
       },
       {
         i: "map",
-        x: 0, y: 6, w: 4, h: 4,
+        x: 0,
+        y: 6,
+        w: 4,
+        h: 4,
         isResizable: false,
       },
       {
         i: "text-marquee",
-        x: 0, y: 22, w: 4, h: 1,
+        x: 0,
+        y: 22,
+        w: 4,
+        h: 1,
         isResizable: false,
       },
       {
         i: "linkedin",
-        x: 0, y: 10, w: 2, h: 3,
+        x: 0,
+        y: 10,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "github",
-        x: 2, y: 10, w: 2, h: 3,
+        x: 2,
+        y: 10,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "codepen",
-        x: 0, y: 13, w: 2, h: 3,
+        x: 0,
+        y: 13,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "email",
-        x: 2, y: 13, w: 2, h: 3,
+        x: 2,
+        y: 13,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "my-stack",
-        x: 0, y: 16, w: 4, h: 6,
+        x: 0,
+        y: 16,
+        w: 4,
+        h: 6,
         isResizable: false,
       },
       {
         i: "jobs",
-        x: 0, y: 28, w: 6, h: 16,
+        x: 0,
+        y: 28,
+        w: 6,
+        h: 16,
         isResizable: false,
       },
       {
         i: "game-tech",
-        x: 0, y: 44, w: 6, h: 10,
+        x: 0,
+        y: 44,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "fix-your-ac",
-        x: 0, y: 54, w: 6, h: 10,
+        x: 0,
+        y: 54,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "station-setup",
-        x: 0, y: 64, w: 6, h: 10,
+        x: 0,
+        y: 64,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "dropify",
-        x: 0, y: 74, w: 6, h: 10,
+        x: 0,
+        y: 74,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "alliance-landing",
-        x: 0, y: 84, w: 6, h: 10,
+        x: 0,
+        y: 84,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
       {
         i: "developer-landing",
-        x: 0, y: 94, w: 6, h: 10,
+        x: 0,
+        y: 94,
+        w: 6,
+        h: 10,
         isResizable: false,
       },
     ],
   },
-  work: {
+
+  skills: {
     lg: [
       {
+        i: "my-stack",
+        x: 0,
+        y: 0,
+        w: 7,
+        h: 4,
+        isResizable: false,
+      },
+      {
         i: "bio",
-        x: 6, y: 21, w: 6, h: 4,
+        x: 0,
+        y: 4,
+        w: 5,
+        h: 4,
         isResizable: false,
       },
       {
         i: "theme-toggle",
-        x: 8, y: 0, w: 6, h: 3,
-        isResizable: false,
-      },
-      {
-        i: "map",
-        x: 9, y: 25, w: 3, h: 4,
+        x: 7,
+        y: 0,
+        w: 5,
+        h: 3,
         isResizable: false,
       },
       {
         i: "text-marquee",
-        x: 0, y: 29, w: 12, h: 1,
+        x: 7,
+        y: 3,
+        w: 5,
+        h: 1,
         isResizable: false,
       },
       {
         i: "linkedin",
-        x: 0, y: 25, w: 2, h: 2,
+        x: 5,
+        y: 4,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "github",
-        x: 2, y: 25, w: 2, h: 2,
+        x: 7,
+        y: 4,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
+        i: "phone",
+        x: 7,
+        y: 6,
+        w: 2,
+        h: 2,
+        isResizable: false,
+      },
+      {
+        i: "map",
+        x: 9,
+        y: 7,
+        w: 3,
+        h: 4,
+        isResizable: false,
+      },
+      // Remaining items remain the same
+
+      {
         i: "codepen",
-        x: 0, y: 27, w: 2, h: 2,
+        x: 0,
+        y: 27,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "email",
-        x: 2, y: 25, w: 2, h: 2,
+        x: 2,
+        y: 25,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "my-stack",
-        x: 4, y: 25, w: 5, h: 4,
+        x: 4,
+        y: 25,
+        w: 5,
+        h: 4,
         isResizable: false,
       },
       {
         i: "jobs",
-        x: 0, y: 0, w: 6, h: 7,
+        x: 0,
+        y: 0,
+        w: 6,
+        h: 7,
         isResizable: false,
       },
       {
         i: "game-tech",
-        x: 6, y: 3, w: 6, h: 6,
+        x: 6,
+        y: 3,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "fix-your-ac",
-        x: 0, y: 7, w: 6, h: 6,
+        x: 0,
+        y: 7,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "dropify",
-        x: 6, y: 9, w: 6, h: 6,
+        x: 6,
+        y: 9,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "station-setup",
-        x: 0, y: 13, w: 6, h: 6,
+        x: 0,
+        y: 13,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "alliance-landing",
-        x: 6, y: 15, w: 6, h: 6,
+        x: 6,
+        y: 15,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
       {
         i: "developer-landing",
-        x: 0, y: 19, w: 6, h: 6,
+        x: 0,
+        y: 19,
+        w: 6,
+        h: 6,
         isResizable: false,
       },
     ],
     md: [
       {
+        i: "my-stack",
+        x: 0,
+        y: 0,
+        w: 6,
+        h: 6,
+        isResizable: false,
+      },
+      {
         i: "bio",
-        x: 5, y: 29, w: 5, h: 6,
+        x: 0,
+        y: 6,
+        w: 5,
+        h: 6,
         isResizable: false,
       },
       {
         i: "theme-toggle",
-        x: 5, y: 0, w: 5, h: 5,
-        isResizable: false,
-      },
-      {
-        i: "map",
-        x: 8, y: 36, w: 2, h: 6,
+        x: 6,
+        y: 0,
+        w: 4,
+        h: 5,
         isResizable: false,
       },
       {
         i: "text-marquee",
-        x: 5, y: 35, w: 5, h: 1,
+        x: 6,
+        y: 5,
+        w: 4,
+        h: 1,
         isResizable: false,
       },
       {
         i: "linkedin",
-        x: 0, y: 36, w: 2, h: 3,
+        x: 5,
+        y: 0,
+        w: 2,
+        h: 2,
         isResizable: false,
       },
       {
         i: "github",
-        x: 2, y: 36, w: 2, h: 3,
+        x: 5,
+        y: 2,
+        w: 2,
+        h: 2,
+        isResizable: false,
+      },
+      {
+        i: "phone",
+        x: 7,
+        y: 2,
+        w: 2,
+        h: 2,
+        isResizable: false,
+      },
+      {
+        i: "map",
+        x: 8,
+        y: 6,
+        w: 2,
+        h: 6,
         isResizable: false,
       },
       {
         i: "codepen",
-        x: 0, y: 39, w: 2, h: 3,
+        x: 0,
+        y: 39,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "email",
-        x: 2, y: 39, w: 2, h: 3,
+        x: 2,
+        y: 39,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "my-stack",
-        x: 4, y: 36, w: 4, h: 6,
+        x: 4,
+        y: 36,
+        w: 4,
+        h: 6,
         isResizable: false,
       },
       {
         i: "jobs",
-        x: 0, y: 0, w: 5, h: 12,
+        x: 0,
+        y: 0,
+        w: 5,
+        h: 12,
         isResizable: false,
       },
       {
         i: "game-tech",
-        x: 0, y: 12, w: 5, h: 8,
+        x: 0,
+        y: 12,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "fix-your-ac",
-        x: 5, y: 5, w: 5, h: 8,
+        x: 5,
+        y: 5,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "dropify",
-        x: 5, y: 13, w: 5, h: 8,
+        x: 5,
+        y: 13,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "station-setup",
-        x: 0, y: 20, w: 5, h: 8,
+        x: 0,
+        y: 20,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "alliance-landing",
-        x: 5, y: 21, w: 5, h: 8,
+        x: 5,
+        y: 21,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
       {
         i: "developer-landing",
-        x: 0, y: 28, w: 5, h: 8,
+        x: 0,
+        y: 28,
+        w: 5,
+        h: 8,
         isResizable: false,
       },
     ],
     sm: [
       {
+        i: "my-stack",
+        x: 0,
+        y: 0,
+        w: 4,
+        h: 6,
+        isResizable: false,
+      },
+      {
         i: "bio",
-        x: 0, y: 82, w: 4, h: 6,
+        x: 0,
+        y: 6,
+        w: 4,
+        h: 6,
         isResizable: false,
       },
       {
         i: "theme-toggle",
-        x: 0, y: 0, w: 4, h: 5,
-        isResizable: false,
-      },
-      {
-        i: "map",
-        x: 0, y: 100, w: 4, h: 6,
+        x: 0,
+        y: 12,
+        w: 4,
+        h: 5,
         isResizable: false,
       },
       {
         i: "text-marquee",
-        x: 0, y: 81, w: 4, h: 1,
+        x: 0,
+        y: 17,
+        w: 4,
+        h: 1,
         isResizable: false,
       },
       {
         i: "linkedin",
-        x: 0, y: 94, w: 2, h: 3,
+        x: 0,
+        y: 18,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "github",
-        x: 2, y: 94, w: 2, h: 3,
+        x: 2,
+        y: 18,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "phone",
+        x: 0,
+        y: 21,
+        w: 2,
+        h: 3,
+        isResizable: false,
+      },
+      {
+        i: "map",
+        x: 0,
+        y: 24,
+        w: 4,
+        h: 6,
         isResizable: false,
       },
       {
         i: "codepen",
-        x: 0, y: 97, w: 2, h: 3,
+        x: 0,
+        y: 97,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "email",
-        x: 2, y: 97, w: 2, h: 3,
+        x: 2,
+        y: 97,
+        w: 2,
+        h: 3,
         isResizable: false,
       },
       {
         i: "my-stack",
-        x: 0, y: 88, w: 4, h: 6,
+        x: 0,
+        y: 88,
+        w: 4,
+        h: 6,
         isResizable: false,
       },
       {
         i: "jobs",
-        x: 0, y: 5, w: 4, h: 16,
+        x: 0,
+        y: 5,
+        w: 4,
+        h: 16,
         isResizable: false,
       },
       {
         i: "game-tech",
-        x: 0, y: 21, w: 4, h: 10,
+        x: 0,
+        y: 21,
+        w: 4,
+        h: 10,
         isResizable: false,
       },
       {
         i: "fix-your-ac",
-        x: 0, y: 31, w: 4, h: 10,
+        x: 0,
+        y: 31,
+        w: 4,
+        h: 10,
         isResizable: false,
       },
       {
         i: "dropify",
-        x: 0, y: 41, w: 4, h: 10,
+        x: 0,
+        y: 41,
+        w: 4,
+        h: 10,
         isResizable: false,
       },
       {
         i: "station-setup",
-        x: 0, y: 51, w: 4, h: 10,
+        x: 0,
+        y: 51,
+        w: 4,
+        h: 10,
         isResizable: false,
       },
       {
         i: "alliance-landing",
-        x: 5, y: 61, w: 4, h: 10,
+        x: 5,
+        y: 61,
+        w: 4,
+        h: 10,
         isResizable: false,
       },
       {
         i: "developer-landing",
-        x: 0, y: 71, w: 4, h: 10,
+        x: 0,
+        y: 71,
+        w: 4,
+        h: 10,
         isResizable: false,
       },
     ],
   },
-};
+}
 
 const ResponsiveGridLayout = WidthProvider(Responsive)
 
@@ -777,7 +1657,7 @@ const Grid = () => {
   const [height, setHeight] = useState(280)
   const [isMounted, setMounted] = useState(false)
   const [isDraggable, setIsDraggable] = useState(true)
-  const [activeLayout, setActiveLayout] = useState<keyof typeof layout>("all");
+  const [activeLayout, setActiveLayout] = useState<keyof typeof layout>("all")
 
   useEffect(() => {
     setTimeout(() => {
@@ -805,46 +1685,78 @@ const Grid = () => {
   }, [])
 
   return (
-      <>
-      <div className={styles.container }>
-      <CardWrapper>
-      <nav className="flex justify-center gap-6 px-6 py-5 sm:px-8 sm:py-6">
-        
-        <button
-          className={`px-4 py-2 text-sm sm:text-base font-medium border border-gray-300 dark:border-gray-700 rounded-full transition-all duration-300 ease-in-out relative overflow-hidden group ${
-            activeLayout === "all"
-              ? "dark:gray-900 text-grey-600"
-              : "bg-gray-200 dark:bg-zinc-800 dark:text-white text-gray-900"
-          }`}
-          onClick={() => setActiveLayout("all")}
-        >
-          All
-        </button>
-        <button
-          className={`px-4 py-2 rounded-lg text-sm sm:text-base font-medium ${
-            activeLayout === "about"
-              ? "dark:gray-900 text-grey-600"
-              : "bg-gray-200 dark:bg-zinc-800 dark:text-white text-gray-900"
-          }`}
-          onClick={() => setActiveLayout("about")}
-        >
-          About
-        </button>
-        <button
-          className={`px-4 py-2 rounded-lg text-sm sm:text-base font-medium ${
-            activeLayout === "work"
-              ? "dark:gray-900 text-grey-600"
-              : "bg-gray-200 dark:bg-zinc-800 dark:text-white text-gray-900"
-          }`}
-          onClick={() => setActiveLayout("work")}
-        >
-          Work
-        </button>
-      </nav>
-    </CardWrapper>
-      </div>
-      <div className={styles.container}>
+    <>
+      <div className={`${styles.navbar}`}>
+        <CardWrapper className="rounded-full">
+          <nav
+            className="flex justify-center gap-6 px-6 py-5 sm:px-8 sm:py-6"
+            style={{ width: "360px", margin: "0 auto", borderRadius: "50px" }}
+          >
+            <button
+              className={`flex items-center justify-center px-4 py-2 text-sm sm:text-base font-medium border border-gray-300 dark:border-gray-700 rounded-full transition-all duration-300 ease-in-out relative overflow-hidden group ${
+                activeLayout === "all"
+                  ? "dark:bg-gray-900 text-gray-600"
+                  : "bg-gray-200 dark:bg-zinc-800 dark:text-white text-gray-900"
+              }`}
+              onClick={() => setActiveLayout("all")}
+            >
+              All
+            </button>
+            <button
+              className={`flex items-center justify-center px-4 py-2 text-sm sm:text-base font-medium border border-gray-300 dark:border-gray-700 rounded-full transition-all duration-300 ease-in-out relative overflow-hidden group ${
+                activeLayout === "about"
+                  ? "dark:bg-gray-900 text-gray-600"
+                  : "bg-gray-200 dark:bg-zinc-800 dark:text-white text-gray-900"
+              }`}
+              onClick={() => setActiveLayout("about")}
+            >
+              About
+            </button>
+            <button
+              className={`flex items-center justify-center px-4 py-2 text-sm sm:text-base font-medium border border-gray-300 dark:border-gray-700 rounded-full transition-all duration-300 ease-in-out relative overflow-hidden group ${
+                activeLayout === "work"
+                  ? "dark:bg-gray-900 text-gray-600"
+                  : "bg-gray-200 dark:bg-zinc-800 dark:text-white text-gray-900"
+              }`}
+              onClick={() => setActiveLayout("work")}
+            >
+              Work
+            </button>
+            <button
+              className={`flex items-center justify-center px-4 py-2 text-sm sm:text-base font-medium border border-gray-300 dark:border-gray-700 rounded-full transition-all duration-300 ease-in-out relative overflow-hidden group ${
+                activeLayout === "skills"
+                  ? "dark:bg-gray-900 text-gray-600"
+                  : "bg-gray-200 dark:bg-zinc-800 dark:text-white text-gray-900"
+              }`}
+              onClick={() => setActiveLayout("skills")}
+            >
+              Skills
+            </button>
+          </nav>
+        </CardWrapper>
+        <CardWrapper className="rounded-full w-36 border border-none">
+
+        <Button
+  onClick={() => {
+    const viewLink = document.createElement("a");
+    viewLink.href = "/Krishnadev-Resume.pdf";
+    viewLink.target = "_blank";
+    viewLink.click();
+
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "/Krishnadev-Resume.pdf";
+    downloadLink.download = "Krishnadev-Resume.pdf";
+    downloadLink.click();
+  }}
+  className="resume-button border border-none hidden sm:block px-8 py-3 text-sm sm:text-base font-medium border border-gray-300 rounded-full"
+>
+  Resume
+</Button>
+</CardWrapper>
+
+      </div> 
       
+      <div className={styles.container}>
         <ResponsiveGridLayout
           useCSSTransforms
           className={styles.layout}
@@ -907,111 +1819,108 @@ const Grid = () => {
             </BlurFade>
           </div>
           <div
-          key="text-marquee"
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: isMounted ? "500ms" : "0ms",
-          }}
-        >
-          <BlurFade delay={0.04}>
-            <TextMarqueeCard />
-          </BlurFade>
-        </div>
-        <div
-          key="linkedin"
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: isMounted ? "500ms" : "0ms",
-          }}
-        >
-          <BlurFade delay={0.24}>
-            <IconCard
-              title="Linkedin"
-              link="https://www.linkedin.com/in/krishnadev-r-a681aa343/"
-            />
-          </BlurFade>
-        </div>
-        <div
-          key="github"
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: isMounted ? "500ms" : "0ms",
-          }}
-        >
-          <BlurFade delay={0.26}>
-            <IconCard title="Github" link="https://github.com/kichuu" />
-          </BlurFade>
-        </div>
-        <div
-          key="codepen"
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: isMounted ? "500ms" : "0ms",
-          }}
-        >
-          <BlurFade delay={0.28}>
-            <IconCard
-              title="Phone"
-              link="tel:+916282922960"
-            />
-          </BlurFade>
-        </div>
-        <div
-          key="email"
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: isMounted ? "500ms" : "0ms",
-          }}
-        >
-          <BlurFade delay={0.3}>
-            <IconCard title="Email" link="mailto:krishnadevr07@gmail.com" />
-          </BlurFade>
-        </div>
-        <div
-          key="my-stack"
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: isMounted ? "500ms" : "0ms",
-          }}
-        >
-          <BlurFade delay={0.35}>
-            <MyTechCard />
-          </BlurFade>
-        </div>
-        <div
-          key="jobs"
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: isMounted ? "700ms" : "0ms",
-          }}
-        >
-          <BlurFade delay={0.4}>
-            <JobsCard />
-          </BlurFade>
-        </div>
-        <div
-          key="game-tech"
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: isMounted ? "700ms" : "0ms",
-          }}
-        >
-          <BlurFade delay={0.5}>
-            <GameTech />
-          </BlurFade>
-        </div>
-        <div
-          key="fix-your-ac"
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: isMounted ? "700ms" : "0ms",
-          }}
-        >
-          <BlurFade delay={0.55}>
-            <FixYourAc />
-          </BlurFade>
-        </div>
-        {/* <div
+            key="text-marquee"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "500ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.04}>
+              <TextMarqueeCard />
+            </BlurFade>
+          </div>
+          <div
+            key="linkedin"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "500ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.24}>
+              <IconCard
+                title="Linkedin"
+                link="https://www.linkedin.com/in/krishnadev-r-a681aa343/"
+              />
+            </BlurFade>
+          </div>
+          <div
+            key="github"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "500ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.26}>
+              <IconCard title="Github" link="https://github.com/kichuu" />
+            </BlurFade>
+          </div>
+          <div
+            key="codepen"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "500ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.28}>
+              <IconCard title="Phone" link="tel:+916282922960" />
+            </BlurFade>
+          </div>
+          <div
+            key="email"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "500ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.3}>
+              <IconCard title="Email" link="mailto:krishnadevr07@gmail.com" />
+            </BlurFade>
+          </div>
+          <div
+            key="my-stack"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "500ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.35}>
+              <MyTechCard />
+            </BlurFade>
+          </div>
+          <div
+            key="jobs"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "700ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.4}>
+              <JobsCard />
+            </BlurFade>
+          </div>
+          <div
+            key="game-tech"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "700ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.5}>
+              <GameTech />
+            </BlurFade>
+          </div>
+          <div
+            key="fix-your-ac"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "700ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.55}>
+              <FixYourAc />
+            </BlurFade>
+          </div>
+          {/* <div
 					key="station-setup"
 					className={cn(styles.itemGrab, styles.item)}
 					style={{
@@ -1022,18 +1931,18 @@ const Grid = () => {
 						<StationSetupCard />
 					</BlurFade>
 				</div> */}
-        <div
-					key="dropify"
-					className={cn(styles.itemGrab, styles.item)}
-					style={{
-						transitionDuration: isMounted ? "700ms" : "0ms"
-					}}
-        >
-					<BlurFade delay={0.65}>
-						<DropifyCard />
-					</BlurFade>
-				</div>
-        {/* <div
+          <div
+            key="dropify"
+            className={cn(styles.itemGrab, styles.item)}
+            style={{
+              transitionDuration: isMounted ? "700ms" : "0ms",
+            }}
+          >
+            <BlurFade delay={0.65}>
+              <DropifyCard />
+            </BlurFade>
+          </div>
+          {/* <div
 					key="alliance-landing"
 					className={cn(styles.itemGrab, styles.item)}
 					style={{
@@ -1044,7 +1953,7 @@ const Grid = () => {
 						<AllianceLandingCard />
 					</BlurFade>
 				</div> */}
-        {/* <div
+          {/* <div
 					key="developer-landing"
 					className={cn(styles.itemGrab, styles.item)}
 					style={{
@@ -1057,7 +1966,7 @@ const Grid = () => {
 				</div> */}
         </ResponsiveGridLayout>
       </div>
-      </>
+    </>
   )
 }
 

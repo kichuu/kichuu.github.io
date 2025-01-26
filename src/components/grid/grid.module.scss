@@ -1,3 +1,19 @@
+.navbar {
+  display: flex;
+  width: 50%;
+  margin: 30px auto; // Center the navbar horizontally
+  border: none;
+  @media (max-width: 799px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110%;  
+  }
+  
+}
+
+
+
 .container {
   max-width: 1200px;
   position: relative;
