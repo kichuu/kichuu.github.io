@@ -1734,28 +1734,25 @@ const Grid = () => {
             </button>
           </nav>
         </CardWrapper>
-        <CardWrapper className="rounded-full w-36 border border-none">
 
         <Button
-  onClick={() => {
-    const viewLink = document.createElement("a");
-    viewLink.href = "/Krishnadev-Resume.pdf";
-    viewLink.target = "_blank";
-    viewLink.click();
+          onClick={() => {
+            const viewLink = document.createElement("a")
+            viewLink.href = "/Krishnadev-Resume.pdf"
+            viewLink.target = "_blank"
+            viewLink.click()
 
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "/Krishnadev-Resume.pdf";
-    downloadLink.download = "Krishnadev-Resume.pdf";
-    downloadLink.click();
-  }}
-  className="resume-button border border-none hidden sm:block px-8 py-3 text-sm sm:text-base font-medium border border-gray-300 rounded-full"
->
-  Resume
-</Button>
-</CardWrapper>
+            const downloadLink = document.createElement("a")
+            downloadLink.href = "/Krishnadev-Resume.pdf"
+            downloadLink.download = "Krishnadev-Resume.pdf"
+            downloadLink.click()
+          }}
+          className="resume-button  border-none hidden sm:block px-8 py-3 text-sm sm:text-base font-medium border border-gray-300 rounded-full"
+        >
+          Resume
+        </Button>
+      </div>
 
-      </div> 
-      
       <div className={styles.container}>
         <ResponsiveGridLayout
           useCSSTransforms
