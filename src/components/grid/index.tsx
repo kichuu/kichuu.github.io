@@ -23,6 +23,7 @@ import {
   FixYourAc,
   CardWrapper,
 } from "@/components/cards"
+import { Button } from "../ui/button"
 
 export const layout = {
   all: {
@@ -1733,25 +1734,25 @@ const Grid = () => {
             </button>
           </nav>
         </CardWrapper>
-        <CardWrapper className="inline-block radius w-36 border border-none p-0 m-0 rounded-full">
-  <button
-    onClick={() => {
-      const viewLink = document.createElement("a");
-      viewLink.href = "/Krishnadev-Resume.pdf";
-      viewLink.target = "_blank";
-      viewLink.click();
+        <CardWrapper className="rounded-full w-36 border border-none">
 
-      const downloadLink = document.createElement("a");
-      downloadLink.href = "/Krishnadev-Resume.pdf";
-      downloadLink.download = "Krishnadev-Resume.pdf";
-      downloadLink.click();
-    }}
-    className="resume-button self-center justify-center items-center hidden w-32 sm:block px-8 py-3 text-sm sm:text-base font-medium border border-gray-300 rounded-full"
-  >
-    Resume
-  </button>
+        <Button
+  onClick={() => {
+    const viewLink = document.createElement("a");
+    viewLink.href = "/Krishnadev-Resume.pdf";
+    viewLink.target = "_blank";
+    viewLink.click();
+
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "/Krishnadev-Resume.pdf";
+    downloadLink.download = "Krishnadev-Resume.pdf";
+    downloadLink.click();
+  }}
+  className="resume-button border border-none hidden sm:block px-8 py-3 text-sm sm:text-base font-medium border border-gray-300 rounded-full"
+>
+  Resume
+</Button>
 </CardWrapper>
-
 
       </div> 
       
