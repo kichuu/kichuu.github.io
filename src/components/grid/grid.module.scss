@@ -1,12 +1,17 @@
 .navbar {
-  width: 360px;
+  display: flex;
+  width: 50%;
   margin: 30px auto; // Center the navbar horizontally
   border: none;
   @media (max-width: 799px) {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110%;  
   }
   
 }
+
 
 
 .container {
