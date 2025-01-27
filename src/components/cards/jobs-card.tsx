@@ -1,5 +1,7 @@
 import CardWrapper from "@/components/cards/card-wrapper";
 import classNames from "classnames";
+import GitHubStats from "./github-stats";
+import GitHubCalendarComponent from "./project-cards/github-calender";
 
 const jobsData = [
   {
@@ -72,25 +74,27 @@ const JobItem = ({
 const JobsCard = () => {
   return (
     <CardWrapper>
-      <div className="static h-full flex flex-col gap-6 p-8 justify-start">
-        <div className="flex flex-col items-start gap-1">
-          <h4 className="text-xs font-medium opacity-60 uppercase">
-            6 Months of
-          </h4>
-          <h1 className="text-2xl font-medium dark:text-white text-black uppercase opacity-90 text-center">
-            Experience
-          </h1>
+      <div className="static h-full flex flex-col gap-6 p-4 justify-start">
+        {/* GitHub Stats Section */}
+        <div className="mt-4">
+          <h2 className="text-xl font-medium dark:text-white text-black text-center mb-4">
+            My GitHub Stats
+          </h2>
+          <GitHubStats />
         </div>
-        <div className="flex flex-col relative z-10 lg:justify-around">
-          <JobItem job={jobsData[0]} active />
 
-          {jobsData.slice(1).map((job, index) => (
-            <JobItem key={index} job={job} />
-          ))}
+        {/* GitHub Calendar Section */}
+        <div className="mt-2 ">
+          <h2 className="text-xl font-medium dark:text-white text-black text-center mb-4">
+            My GitHub Contributions
+          </h2>
+          <GitHubCalendarComponent />
         </div>
       </div>
     </CardWrapper>
   );
 };
+
+
 
 export default JobsCard;
