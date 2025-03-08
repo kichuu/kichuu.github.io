@@ -44,8 +44,6 @@ const Dropify = () => {
           </Badge>
           <Badge variant="default" className="text-xs">
             Tailwind
-          </Badge><Badge variant="default" className="text-xs">
-            Tailwind
           </Badge>
           <Badge variant="default" className="text-xs">
             Express
