@@ -31,7 +31,7 @@ const Dropify = () => {
           <h1 className="text-2xl font-medium dark:text-white text-black uppercase opacity-90">
             Dropify
           </h1>
-          <SendmessageIcon link="https://fsd-group-14-5418.vercel.app/" lottieName="dropify" />
+          <SendmessageIcon link="https://dropify-alpha.vercel.app/" lottieName="dropify" />
           <GitHubIcon link={"https://github.com/kichuu/FSD-Group-14-5418"} lottieName={"dropify"}/>
         </div>
         <div className="flex gap-2 flex-wrap mt-1">
